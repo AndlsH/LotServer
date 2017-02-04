@@ -1,2 +1,0 @@
-#  /appex/bin/lotServer stats
-
