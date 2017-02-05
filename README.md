@@ -19,7 +19,7 @@ wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/AndlsH
 ### Custom Install
 Example:
 ```bash
-wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeser_Install/master/appex.sh && chmod +x appex.sh && bash appex.sh install '3.10.0-229.1.2.el7.x86_64'
+wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/AndlsH/LotServer/master/appex.sh && chmod +x appex.sh && bash appex.sh install '3.10.0-229.1.2.el7.x86_64'
 ```
 
 ### Notice for CentOS 7
