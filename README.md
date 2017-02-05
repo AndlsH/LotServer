@@ -70,3 +70,14 @@ echo "/appex/bin/lotServer.sh start" >> /etc/rc.local
 ```bash
 /appex/bin/lotServer.sh stop
 ```
+
+### Deployment Manual [PDF]
+
+- English
+    ```
+    http://download.appexnetworks.com/downloadlsManual.jsp
+    ```
+- Chinese
+    ```
+    http://download.appexnetworks.com.cn/downloadlsManual_cn.jsp
+    ```
