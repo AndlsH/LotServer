@@ -24,6 +24,21 @@ wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/AndlsH
 
 ### Notice for CentOS 7
 - Make a Systemd service
+```
+# vi /lib/systemd/system/appex.service
+
+[Unit]
+Description=AppEx LotServer
+After=network.target
+[Service]
+Type=forking
+ExecStart=/appex/bin/lotServer.sh start
+ExecReload=/appex/bin/lotServer.sh restart
+ExecStop=/appex/bin/lotServer.sh stop
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
+```
 - or, run:
 ```bash
 chmod +x /etc/rc.d/rc.local
