@@ -124,7 +124,7 @@ chattr +i /appex/etc/apx.lic
 function ServerSpeeder()
 {
 [ ! -f /root/appex.zip ] && wget --no-check-certificate -q -O "/root/appex.zip" "https://github.com/AndlsH/LotServer/releases/download/LATEST/appex.zip"
-[ ! -f /root/appex.zip ] && Unstall && echo "Error,Not Found appex.zip! " && exit 1
+[ ! -f /root/appex.zip ] && Unstall && echo "Error: "appex.zip" not found! " && exit 1
 mkdir -p /root/appex
 unzip -o -d /root/appex /root/appex.zip
 SelectKernel;
