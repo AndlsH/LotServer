@@ -3,14 +3,14 @@
 function Welcome()
 {
 clear
-echo -n "                      Local Time :   " && date "+%F [%T]       ";
-echo "            ======================================================";
-echo "            |                    serverSpeeder                   |";
-echo "            |                                         for Linux  |";
-echo "            |----------------------------------------------------|";
-echo "            |                                       -- By .Vicer |";
-echo "            ======================================================";
-echo "";
+echo -n "        Local Time :   " && date "+%F [%T]      ";
+echo    "    ============================================";
+echo    "    |        1-key LotSpeeder Installer        |";
+echo    "    |                                          |";
+echo    "    |               --By:  Andls               |";
+echo    "    |                2017-03-01                |";
+echo    "    ============================================";
+echo    "";
 rootness;
 cd /root
 }
