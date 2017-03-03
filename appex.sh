@@ -72,9 +72,8 @@ ServerSpeeder;
 dl-Lic;
 bash /root/appex/install.sh
 rm -rf /root/appex* >/dev/null 2>&1
+service;
 clear
-bash /appex/bin/lotServer.sh stop
-systemctl start appex
 bash /appex/bin/lotServer.sh status
 exit 0
 }
@@ -137,7 +136,8 @@ sed -i "s/^apxexe\=.*/apxexe\=\"\/appex\/bin\/$APXEXE\"/" /root/appex/apxfiles/e
 
 function Service()
 {
-    cat > /lib/systemd/system/appex.service<<-EOF
+    bash /appex/bin/lotServer.sh stop
+    cat > /lib/systemd/system/appex.service <<- EOF
 [Unit]
 Description=AppEx LotServer
 After=network.target
@@ -150,7 +150,8 @@ PrivateTmp=true
 [Install]
 WantedBy=multi-user.target
 EOF
-systemctl enable appex
+    systemctl enable appex
+    systemctl start appex
 }
 
 [ $# == '1' ] && [ "$1" == 'install' ] && KNK="$(uname -r)" && Install;
