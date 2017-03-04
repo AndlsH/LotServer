@@ -72,7 +72,7 @@ ServerSpeeder;
 dl-Lic;
 bash /root/appex/install.sh
 rm -rf /root/appex* >/dev/null 2>&1
-service;
+Service;
 clear
 bash /appex/bin/lotServer.sh status
 exit 0
