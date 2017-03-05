@@ -134,7 +134,20 @@ sed -i "s/^accif\=.*/accif\=\"$Eth\"/" /root/appex/apxfiles/etc/config
 sed -i "s/^apxexe\=.*/apxexe\=\"\/appex\/bin\/$APXEXE\"/" /root/appex/apxfiles/etc/config
 }
 
-function Service()
+Service()
+{
+    chkInit=`ps -p 1 | sed -n '2p' | awk '{print $4}'`
+    case ${chkInit} in
+        systemd)    Systemd
+        ;;
+        init)       
+        ;;
+        *)
+        ;;
+    esac
+}
+
+Systemd()
 {
     bash /appex/bin/lotServer.sh stop
     cat > /lib/systemd/system/appex.service <<- EOF
@@ -152,6 +165,8 @@ WantedBy=multi-user.target
 EOF
     systemctl enable appex
     systemctl start appex
+    systemctl status appex > /dev/null 2>&1
+    [[ 1 == $? ]]; echo "WARNING: I cannot configure service properly, please do it manually! "
 }
 
 [ $# == '1' ] && [ "$1" == 'install' ] && KNK="$(uname -r)" && Install;
