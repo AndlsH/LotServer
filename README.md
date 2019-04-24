@@ -11,19 +11,19 @@ bash appex.sh [install |unstall |install '{lotServer of Kernel Version}']
 ### Install
 
 ```bash
-wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/AndlsH/LotServer/master/appex.sh && chmod +x appex.sh && bash appex.sh install
+wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/eegod/LotServer/master/appex.sh && chmod +x appex.sh && bash appex.sh install
 ```
 
 Custom Install Example:
 
 ```bash
-wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/AndlsH/LotServer/master/appex.sh && chmod +x appex.sh && bash appex.sh install '3.10.0-229.1.2.el7.x86_64'
+wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/eegod/LotServer/master/appex.sh && chmod +x appex.sh && bash appex.sh install '3.10.0-229.1.2.el7.x86_64'
 ```
 
 ### Uninstall
 
 ```bash
-wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/AndlsH/LotServer/master/appex.sh && chmod +x appex.sh && bash appex.sh unstall
+wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/eegod/LotServer/master/appex.sh && chmod +x appex.sh && bash appex.sh unstall
 ```
 
 ### Notice for Auto-start on CentOS 7
